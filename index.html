@@ -7,18 +7,19 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.12/jquery.transit.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 
   <script>
     $(document).ready(()=>{
       
       let icones = [
-        {icone: 'wifi', code:1},
+        {icone: '<i class="fas fa-wifi"></i>', code:1},
         {txt: 'Wi-fi', code:1},
-        {icone: 'som', code:2},
-        {txt: 'Controle do volume', code:2},
-        {icone: 'face', code:3},
+        {icone: '<i class="fab fa-google-play"></i>', code:2},
+        {txt: 'Google Play', code:2},
+        {icone: '<i class="fab fa-facebook-square"></i>', code:3},
         {txt: 'Facebook', code:3},
-        {icone: 'power', code:4},
+        {icone: '<i class="fas fa-power-off"></i>', code:4},
         {txt: 'Ligar e desligar', code:4}
       ];
 
@@ -132,7 +133,6 @@
       font-weight: 300;
       font-size: 16px;
       line-height: 1.4em;
-      overflow: hidden;
       color: #333;
       background: #eee;
       background-image: url(https://subtlepatterns.com/patterns/gplaypattern.png);
@@ -144,10 +144,9 @@
 
     .container {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: center;
       flex-wrap: wrap;
-      height: 100vh;
     }
 
     .cardWrapper {
@@ -189,7 +188,7 @@
       -webkit-transform-style: preserve-3d;
       -moz-transform-style: preserve-3d;
       -o-transform-style: preserve-3d;
-      margin: 20px 0;
+      margin-top: 0px;
     }
 
     .card.flipped {
@@ -202,7 +201,7 @@
     .card .front,
     .card .back {
       display: block;
-      height: 100%;
+      height: 80%;
       width: 100%;
       line-height: 60px;
       color: white;
@@ -251,6 +250,9 @@
       height: 100%;
       margin:0;
       text-align: center;
+    }
+    .cardTitle i {
+      font-size: 3em;
     }
   </style>
 </head>
