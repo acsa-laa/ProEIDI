@@ -24,14 +24,14 @@
       ];
 
       let equipe = {
-        verde: 'FIM',
-        amarela: '',
-        rosa: '',
-        vermelho: '',
-        azul: '',
-        cinza: '',
-        branco: '',
-        roxo: '',
+        verde: 'Wi-fi',
+        amarela: 'Login',
+        rosa: 'Internet',
+        vermelho: 'Smartphone',
+        azul: 'Mouse',
+        cinza: 'Teclado',
+        branco: 'E-mail',
+        roxo: 'Aplicativos',
       };
 
       icones.sort(()=>{
@@ -91,7 +91,13 @@
                 let cor =$(location).attr('href').split('#')[1];
                 
                 setTimeout(() => {
-                  $('.row').html('<h1 style="font-size: 150px; color: red;">'+equipe[cor]+'</h1>');
+                  $('.row').html(`
+                  <h1 style="font-size: 25px; padding: 0 20px;">
+                    A palavra chave de vocês é 
+                    <strong style="color: red;">`
+                    +equipe[cor]+
+                    `</strong> para continuar o circuito vá até a sala onde vocês tinham aula e siga as instruções do quadro.
+                  </h1>`);
                 }, 1000);
 
               }
@@ -175,6 +181,7 @@
       -o-perspective: 800px;
       perspective: 800px;
       padding-left: 1%;
+      height: 165px !important;
     }
 
     .card {
@@ -249,6 +256,7 @@
       align-items: center;
       height: 100%;
       margin:0;
+      font-size: 30px;
       text-align: center;
     }
     .cardTitle i {
